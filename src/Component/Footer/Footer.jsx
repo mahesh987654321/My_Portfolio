@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.css";
 import wave from "../../img/wave.png";
-import insta from "@iconscout/react-unicons/icons/uil-instagram";
+
 import UilInstagram from "@iconscout/react-unicons/icons/uil-instagram";
 
 import UilFacebook from "@iconscout/react-unicons/icons/uil-facebook";
@@ -17,9 +17,9 @@ const Footer = () => {
       <div className="f-content">
         <span>maheshbiswas26@gmail.com</span>
         <div className="f-icons">
-          <UilInstagram style={{ color: "white", fontSize: "7rem" }} />
-          <UilFacebook style={{ color: "white", width: "7rem" }} />
-          <UilGithub style={{ color: "white", width: "7rem" }} />
+          <UilInstagram color="white" size="3rem" />
+          <UilFacebook color="white" size="3rem" />
+          <UilGithub color="white" size="3rem" />
         </div>
       </div>
     </div>
