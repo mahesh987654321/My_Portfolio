@@ -5,6 +5,7 @@ import amazon from "../../img/amazon.png";
 import fiverr from "../../img/fiverr.png";
 import Upwork from "../../img/Upwork.png";
 import Shopify from "../../img/Shopify.png";
+import { motion } from "framer-motion";
 const Works = () => {
   return (
     <div className="work">
@@ -32,7 +33,13 @@ const Works = () => {
       </div>
       {/* roght side bwlow the code */}
       <div className="w-right">
-        <div className="w-mainCircle">
+        <motion.div
+          initial={{ rotate: 90 }}
+          whileInView={{ rotate: 0 }}
+          viewport={{ margin: "-40px" }}
+          transition={{ duration: 3.5, type: "spring" }}
+          className="w-mainCircle"
+        >
           <div className="w-seeCircle">
             <img src={Upwork} alt="" />
           </div>
@@ -48,7 +55,7 @@ const Works = () => {
           <div className="w-seeCircle">
             <img src={facebook} alt="" />
           </div>
-        </div>
+        </motion.div>
         <div className="w-backCircle blueCircle"></div>
         <div className="w-backCircle yellowCircle"></div>
       </div>

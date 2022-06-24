@@ -9,7 +9,7 @@ import "swiper/css";
 
 const Portfolio = () => {
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="portfolio">
       {/* heading */}
       <span>Swiper</span>
       <span>POrtfolio</span>

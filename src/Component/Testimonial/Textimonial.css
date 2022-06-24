@@ -28,7 +28,6 @@
 .t-blur2 {
   left: 30rem;
   top: -20rem;
-  
 }
 .tastimonial {
   display: flex;
@@ -62,4 +61,13 @@
 }
 .t-wrapper .swiper-pagination-bullet-active {
   background: var(--orange);
+}
+@media screen and (max-width: 480px) {
+  .t-wrapper {
+    padding: 0;
+  }
+  .tastimonial > img {
+    width: 70px;
+    height: 70px;
+  }
 }

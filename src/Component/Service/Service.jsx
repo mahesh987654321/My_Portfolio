@@ -4,9 +4,11 @@ import heartemoji from "../../img/heartemoji.png";
 import glasses from "../../img/glasses.png";
 import humble from "../../img/humble.png";
 import Card from "../Card/Card";
+import { motion } from "framer-motion";
 const Service = () => {
+  const transition = { duration: "1", type: "spring" };
   return (
-    <div className="service">
+    <div className="service" id="services">
       {/* left side */}
       <div className="awesome">
         <span>My Awesome</span>
@@ -26,7 +28,13 @@ const Service = () => {
         <div className="blur s-blur1" style={{ background: "#ABF1FF94" }}></div>
       </div>
       {/* right side  */}
-      <div style={{ left: "14rem" }} className="cards">
+      <motion.div
+        initial={{ left: "25rem" }}
+        whileInView={{ left: "14rem" }}
+        transition={transition}
+        style={{ left: "14rem" }}
+        className="cards"
+      >
         <Card
           image={heartemoji}
           heading={"Design"}
@@ -34,8 +42,14 @@ const Service = () => {
             "Html, Css, Javascript, Tailwind, Desiui, React js, Node js, Express js, Mongo DB, Firebase"
           }
         />
-      </div>
-      <div style={{ left: "-4rem", top: "12rem" }} className="cards">
+      </motion.div>
+      <motion.div
+        initial={{ left: "-11rem", top: "12rem" }}
+        whileInView={{ left: "-4rem" }}
+        transition={transition}
+        style={{ left: "-4rem", top: "12rem" }}
+        className="cards"
+      >
         <Card
           image={glasses}
           heading={"Developer"}
@@ -43,8 +57,14 @@ const Service = () => {
             "Html, Css, Javascript, Tailwind, Desiui, React js, Node js, Express js, Mongo DB, Firebase"
           }
         />
-      </div>
-      <div style={{ left: "12rem", top: "19rem" }} className="cards">
+      </motion.div>
+      <motion.div
+        initial={{ top: "19rem", left: "25rem" }}
+        whileInView={{ left: "12rem" }}
+        transition={transition}
+        style={{ left: "12rem", top: "19rem" }}
+        className="cards"
+      >
         <Card
           image={humble}
           heading={"UI/UX"}
@@ -52,7 +72,7 @@ const Service = () => {
             "Html, Css, Javascript, Tailwind, Desiui, React js, Node js, Express js, Mongo DB, Firebase"
           }
         />
-      </div>
+      </motion.div>
       <div
         className="blur s-blur2"
         style={{ background: "var(--purple)" }}
